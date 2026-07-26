@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+:root{
+
+    --bg:#1A1418;
+
+    --surface:rgba(47,33,42,.75);
+
+    --card:rgba(59,40,52,.82);
+
+    --rose:#D79AB6;
+
+    --mauve:#B786A6;
+
+    --pink:#F4D9E5;
+
+    --lavender:#DCCEE5;
+
+    --gold:#E6C58A;
+
+    --wine:#7A445C;
+
+    --brown:#5D3A3E;
+
+    --text:#FFF8FC;
+
+    --light:#E7D8E3;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 15px 40px rgba(0,0,0,.28);
+
+}
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top left,rgba(215,154,182,.18),transparent 28%),
+    radial-gradient(circle at bottom right,rgba(183,134,166,.15),transparent 30%),
+    linear-gradient(180deg,#1A1418,#20171D,#241A21);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+::selection{
+
+    background:var(--rose);
+
+    color:#fff;
+
+}
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#1A1418;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(var(--rose),var(--mauve));
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--wine);
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:110px 0;
+
+}
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(26,20,24,.68);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+nav{
+
+    width:90%;
+
+    max-width:1200px;
+
+    height:90px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.monogram{
+
+    width:82px;
+
+    height:82px;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.45s;
+
+}
+
+.monogram:hover{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.monogram-center{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,var(--mauve),var(--rose));
+
+    box-shadow:
+
+    0 0 15px rgba(215,154,182,.45),
+
+    0 0 35px rgba(183,134,166,.35);
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    width:28px;
+
+    height:42px;
+
+    background:linear-gradient(180deg,var(--pink),var(--rose));
+
+    border-radius:50% 50% 40% 40%;
+
+    opacity:.95;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+
+}
+
+.top{
+
+    top:0;
+
+    left:27px;
+
+}
+
+.left{
+
+    left:6px;
+
+    top:21px;
+
+    transform:rotate(-65deg);
+
+}
+
+.right{
+
+    right:6px;
+
+    top:21px;
+
+    transform:rotate(65deg);
+
+}
+
+.bottom-left{
+
+    left:18px;
+
+    bottom:6px;
+
+    transform:rotate(-145deg);
+
+}
+
+.bottom-right{
+
+    right:18px;
+
+    bottom:6px;
+
+    transform:rotate(145deg);
+
+}
+
+.logo-name h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    color:var(--text);
+
+    line-height:1;
+
+    font-weight:700;
+
+}
+
+.logo-name span{
+
+    display:block;
+
+    margin-top:4px;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:var(--pink);
+
+    text-transform:uppercase;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    position:relative;
+
+    color:var(--light);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--pink);
+
+}
+
+nav ul li a.active{
+
+    color:var(--gold);
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    border-radius:20px;
+
+    background:linear-gradient(90deg,var(--rose),var(--gold));
+
+    transition:.35s;
+
+}
+
+nav ul li a:hover::after,
+
+nav ul li a.active::after{
+
+    width:100%;
+
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 34px;
+
+    border-radius:40px;
+
+    background:linear-gradient(135deg,var(--rose),var(--mauve),var(--wine));
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:0 12px 28px rgba(183,134,166,.25);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 0 18px rgba(215,154,182,.35),
+
+    0 18px 40px rgba(0,0,0,.25);
+
+}
+
+.btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 34px;
+
+    border-radius:40px;
+
+    border:1px solid rgba(215,154,182,.35);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    color:var(--text);
+
+    transition:.4s;
+
+}
+
+.btn-outline:hover{
+
+    background:rgba(215,154,182,.12);
+
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+}
+h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    color:var(--text);
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:46px;
+
+    color:var(--text);
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:24px;
+
+    color:var(--gold);
+
+    font-weight:500;
+
+}
+
+p{
+
+    color:var(--light);
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+.card{
+
+    background:rgba(47,33,42,.72);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(230,197,138,.28);
+
+    box-shadow:
+
+    0 25px 45px rgba(0,0,0,.28),
+
+    0 0 30px rgba(215,154,182,.12);
+
+}
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.title span{
+
+    display:inline-block;
+
+    color:var(--gold);
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+.title h2{
+
+    margin-bottom:18px;
+
+}
+
+.title p{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+footer{
+
+    margin-top:80px;
+
+    padding:35px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:var(--light);
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+@media(max-width:992px){
+
+    nav{
+
+        height:auto;
+
+        padding:18px 0;
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    section{
+
+        width:92%;
+
+        padding:90px 0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:52px;
+
+    }
+
+    h2{
+
+        font-size:36px;
+
+    }
+
+    h3{
+
+        font-size:20px;
+
+    }
+
+    .logo-name{
+
+        display:none;
+
+    }
+
+    .btn,
+
+    .btn-outline{
+
+        width:200px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    h2{
+
+        font-size:30px;
+
+    }
+
+    p{
+
+        font-size:15px;
+
+    }
+
+}
