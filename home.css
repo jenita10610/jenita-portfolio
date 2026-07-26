@@ -1,0 +1,576 @@
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+    min-height:100vh;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:90px;
+
+    padding-top:120px;
+
+}
+
+.hero-content{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:12px 26px;
+
+    border-radius:50px;
+
+    background:rgba(215,154,182,.12);
+
+    border:1px solid rgba(215,154,182,.25);
+
+    backdrop-filter:blur(18px);
+
+    color:var(--pink);
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content h1{
+
+    margin-bottom:18px;
+
+    line-height:1.05;
+
+}
+
+.hero-content h3{
+
+    color:var(--gold);
+
+    font-size:26px;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    max-width:550px;
+
+    color:var(--light);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+.hero-btn{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+.image-wrapper{
+
+    position:relative;
+
+    width:420px;
+
+    height:560px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:floatImage 6s ease-in-out infinite;
+
+}
+
+.image-glow{
+
+    position:absolute;
+
+    width:620px;
+
+    height:620px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+
+    rgba(244,217,229,.95) 0%,
+
+    rgba(215,154,182,.75) 20%,
+
+    rgba(183,134,166,.55) 40%,
+
+    rgba(230,197,138,.28) 60%,
+
+    rgba(122,68,92,.15) 78%,
+
+    transparent 92%);
+
+    filter:blur(95px);
+
+    animation:glow 5s ease-in-out infinite;
+
+    z-index:1;
+
+}
+
+.image-ring{
+
+    position:absolute;
+
+    width:390px;
+
+    height:520px;
+
+    border-radius:35px;
+
+    border:2px solid rgba(244,217,229,.28);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+
+    0 0 25px rgba(244,217,229,.25),
+
+    0 0 70px rgba(215,154,182,.20);
+
+    z-index:2;
+
+}
+
+.image-box{
+
+    position:relative;
+
+    width:360px;
+
+    height:490px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    background:#2d2229;
+
+    box-shadow:
+
+    0 0 35px rgba(244,217,229,.35),
+
+    0 0 80px rgba(215,154,182,.28),
+
+    0 30px 70px rgba(0,0,0,.35);
+
+    z-index:3;
+
+    transition:.45s ease;
+
+}
+
+.image-box:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+    0 0 45px rgba(244,217,229,.45),
+
+    0 0 90px rgba(215,154,182,.35),
+
+    0 35px 70px rgba(0,0,0,.40);
+
+}
+
+.image-box img{
+
+    width:400px;
+
+    height:540px;
+
+    object-fit:cover;
+
+  border-radius:28px;
+
+    transition:.45s ease;
+
+}
+
+.image-box:hover img{
+
+    transform:scale(1.08);
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        transform:scale(.90);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.90);
+
+        opacity:.65;
+
+    }
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+.social-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:45px;
+
+}
+
+.social-links a{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:var(--pink);
+
+    font-size:22px;
+
+    transition:.4s ease;
+
+}
+
+.social-links a:hover{
+
+    transform:translateY(-8px) scale(1.08);
+
+    background:linear-gradient(135deg,var(--rose),var(--mauve));
+
+    color:#fff;
+
+    box-shadow:
+
+    0 0 25px rgba(244,217,229,.45),
+
+    0 0 50px rgba(215,154,182,.35);
+
+}
+
+.scroll-down{
+
+    margin-top:60px;
+
+    display:inline-block;
+
+    color:var(--gold);
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:70px;
+
+        padding-top:150px;
+
+    }
+
+    .hero-content{
+
+        order:2;
+
+    }
+
+    .hero-image{
+
+        order:1;
+
+    }
+
+    .hero-content p{
+
+        margin:0 auto 40px;
+
+    }
+
+    .hero-btn{
+
+        justify-content:center;
+
+    }
+
+    .social-links{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding-bottom:80px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:52px;
+
+    }
+
+    .hero-content h3{
+
+        font-size:22px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .image-wrapper{
+
+        width:340px;
+
+        height:340px;
+
+    }
+
+    .image-ring{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+    .image-box{
+
+        width:270px;
+
+        height:270px;
+
+    }
+
+    .image-glow{
+
+        width:480px;
+
+        height:480px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero{
+
+        gap:50px;
+
+    }
+
+    .hero-tag{
+
+        font-size:13px;
+
+        padding:10px 20px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-content h3{
+
+        font-size:19px;
+
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+    .hero-btn{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .image-wrapper{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+    .image-ring{
+
+        width:260px;
+
+        height:260px;
+
+    }
+
+    .image-box{
+
+        width:230px;
+
+        height:230px;
+
+    }
+
+    .image-glow{
+
+        width:420px;
+
+        height:420px;
+
+    }
+
+}
